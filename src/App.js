@@ -1,24 +1,22 @@
-import React from 'react';
+
 import logo from './logo.svg';
 import './App.css';
+import Axious from './Component.js/Axious';
+import Homepage from './Component.js/Homepage';
+import { Route, Routes } from 'react-router-dom';
+import Scoresheet from './Component.js/Scoresheet';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+   
+   
+
+    <Routes>
+     <Route path='/' element={<Homepage/>} />
+     <Route path='/quiz-mode' element={<Axious/>} />
+     <Route path='/scorepage' element={<Scoresheet />}/>
+    </Routes>
     </div>
   );
 }
